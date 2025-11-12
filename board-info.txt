@@ -1,1 +1,2 @@
-require board=CRACKLING
+require board=ASUS_X00AD_2
+require version-bootloader=ASUS_X00AD_2-13-ge86e772

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="Mixilver/android_device_asus_ASUS_X00AD_2" path="device/asus/ASUS_X00AD_2" remote="github" revision="cm-13.0" />
+  <project name="Mixilver/android_kernel_asus_ASUS_X00AD_2" path="kernel/asus/ASUS_X00AD_2" remote="github" revision="main" />
+  <project name="Mixilver/android_vendor_asus_ASUS_X00AD_2" path="vendor/asus/ASUS_X00AD_2" remote="github" revision="cm-13.0" />
+  <project name="LineageOS/android_device_cyanogen_msm8916-common" path="device/cyanogen/msm8916-common" remote="github" revision="cm-13.0" />
+</manifest>

@@ -12,13 +12,19 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+#
 
-LOCAL_PATH := $(call my-dir)
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
-ifeq ($(TARGET_DEVICE), ASUS_X00AD_2)
+# Inherit from ASUS_X00AD_2 device
+$(call inherit-product, device/asus/ASUS_X00AD_2/device.mk)
 
-include $(call all-makefiles-under,$(LOCAL_PATH))
+# Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := ASUS_X00AD_2
+PRODUCT_NAME := full_ASUS_X00AD_2
+PRODUCT_BRAND := asus
+PRODUCT_MODEL := ASUS_X00AD
+PRODUCT_MANUFACTURER := unknown
 
-include $(CLEAR_VARS)
-
-endif

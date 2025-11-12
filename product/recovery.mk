@@ -1,3 +1,3 @@
 # Recovery
-PRODUCT_EXTRA_RECOVERY_KEYS += \
-    $(LOCAL_PATH)/crackling-releasekey
+PRODUCT_PACKAGES += \
+    librecovery_updater_cm

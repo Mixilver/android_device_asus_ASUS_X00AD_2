@@ -1,2 +1,2 @@
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/wileyfox/crackling/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/asus/ASUS_X00AD_2/bluetooth

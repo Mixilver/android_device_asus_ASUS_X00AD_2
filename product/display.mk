@@ -4,7 +4,7 @@ TARGET_SCREEN_WIDTH := 720
 
 # Panel
 PRODUCT_PACKAGES += \
-    pp_calib_data_booyi_OTM1287_720p_video_mode_dsi_panel.xml
+    libjni_livedisplay
 
 # Screen density
 PRODUCT_PROPERTY_OVERRIDES += \

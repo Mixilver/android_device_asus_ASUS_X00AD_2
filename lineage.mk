@@ -12,24 +12,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product, device/wileyfox/crackling/full_crackling.mk)
+$(call inherit-product, device/asus/ASUS_X00AD_2/full_ASUS_X00AD_2.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/cm/config/common_mini_phone.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
-PRODUCT_NAME := lineage_crackling
-BOARD_VENDOR := wileyfox
-PRODUCT_DEVICE := crackling
+PRODUCT_NAME := lineage_ASUS_X00AD_2
+BOARD_VENDOR := asus
+PRODUCT_DEVICE := ASUS_X00AD_2
+PRODUCT_GMS_CLIENTID_BASE := android-asus
+PRODUCT_MANUFACTURER := unknown
+PRODUCT_MODEL := ASUS_X00AD
+PRODUCT_BRAND := asus
 
-PRODUCT_GMS_CLIENTID_BASE := android-wileyfox
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    PRIVATE_BUILD_DESC="msm8916_64-user 6.0.1 MMB29M 3 release-keys"
 
-PRODUCT_MANUFACTURER := Wileyfox
-PRODUCT_MODEL := Wileyfox Swift
-
-PRODUCT_BRAND := Wileyfox
-TARGET_VENDOR := wileyfox
-TARGET_VENDOR_PRODUCT_NAME := Swift
-TARGET_VENDOR_DEVICE_NAME := crackling
+BUILD_FINGERPRINT := asus/WW_Phone/ASUS_X00AD_2:6.0.1/MMB29M/13.0.0.321-20180626:user/release-keys

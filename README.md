@@ -1,41 +1,42 @@
-# Device configuration for Wileyfox Swift
+## Device configuration for Asus Zenfone Go ZB500KL (ASUS_X00AD_2)
 
-## Spec Sheet
+### Build Instructions
+```bash
+# Initialize repo
+mkdir lineage-13.0 && cd lineage-13.0
+repo init -u https://github.com/LineageOS/android.git -b cm-13.0
 
-| Feature                 | Specification                     |
-| :---------------------- | :-------------------------------- |
-| CPU                     | Quad-core 1.2 GHz ARM® Cortex™ A53|
-| Chipset                 | Qualcomm MSM8916 Snapdragon 410   |
-| GPU                     | Adreno 306                        |
-| Memory                  | 2 GB                              |
-| Shipped Android Version | 5.1.1                             |
-| Storage                 | 16 GB                             |
-| MicroSD                 | Up to 128 GB                      |
-| Battery                 | 2500 mAh (removable)              |
-| Dimensions              | 71 x 141,15 x 9,36 mm             |
-| Display                 | 720 x 1280 pixels, 5.0" IPS LCD   |
-| Rear Camera             | 13 MP, LED flash                  |
-| Front Camera            | 5 MP                              |
+# Create local manifests folder
+mkdir -p .repo/local_manifests
 
-## Device Picture
+# Download roomservice.xml
+curl https://raw.githubusercontent.com/Mixilver/android_device_asus_ASUS_X00AD_2/cm-13.0/roomservice.xml \
+    -o .repo/local_manifests/roomservice.xml
 
-![Wileyfox Swift](http://s.4pda.to/YstumqO2cI57cw7o9jBDUMREsvGDbWqz0jTna7xTz2z1jqJHnONSI.jpg "Wileyfox Swift")
+# Sync source
+repo sync
+# or
+# repo sync -c -j$(nproc) --force-sync --no-clone-bundle --no-tags --prune --optimized-fetch
 
-## Copyright
-
+# Start build
+. build/envsetup.sh  
+breakfast ASUS_X00AD_2 && brunch ASUS_X00AD_2
 ```
-#
-# Copyright (C) 2016 The CyanogenMod Project
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-#
+### Spec Sheet
+| Feature                 | Specification                       |
+| :---------------------- | :--------------------------------   |
+| CPU                     | Quad-core 1/1.2 GHz ARM® Cortex™ A53|
+| Chipset                 | Qualcomm Snapdragon 410 (MSM8916)   |
+| GPU                     | Adreno 306                          |
+| Memory                  | 2 GB                                |
+| Shipped Android Version | 6.0.1                               |
+| Storage                 | 16/32 GB                            |
+| MicroSD                 | Up to 128 GB                        |
+| Battery                 | 2660 (2600) mAh (removable)         |
+| Dimensions              | 143.7 x 70.85 x 11.25 mm            |
+| Display                 | 720 x 1280 pixels, 5.0" IPS LCD     |
+| Rear Camera             | 13 MP, LED flash                    |
+| Front Camera            | 5 MP                                |
+
+### Device Picture
+![Zenfone Go](https://mcgrp.ru/images/1288969/3134746.png "Zenfone Go")
